@@ -1,0 +1,14 @@
+#addi $t0,  esim a
+#addi $t1,  esim b
+# oletetaan että verrattavat luvut ovat rekistereissa $t0 ja $t1
+
+slt $t2, $t0, $t1 # a < b
+beq $t2, 1, tosi #jos edellinen piti paikkaansa hyppää kohtaan tosi
+beq $t0, $t1, tosi # jos a == b
+add $t3, $t1, $zero #jos ei pitänyt paikkaansa suoritetaan tämä
+
+
+tosi:
+  add $t3, $t0 ,$zero
+
+#lopputulos rekisterissä 3
