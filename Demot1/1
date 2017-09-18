@@ -1,7 +1,0 @@
-add $v0,$zero,$zero		# lisää 0+0 v0 registeriin v0
-add $t0, $a0,$zero		#lisätään 0 
-addi $t1,$zero, 8		#lisää vakio rekisteriin t1
-Loop: lw $t2, 0($t0)		# lataa rekisteriin t2 ensimmäinen arvo 
-	addi $t0, $t0, 4	#lisää rekisteriin t0 arvo t4 ja 4
-	addi $t1, $t1, -1	#lisää rekisteriin t1 -1 
-	bne $t1, $zero, Loop	#palaa kohtaan loop jos t1 ja $zero ovat samat mene label loop
