@@ -1,4 +1,4 @@
-	li	$a0, 0x400000
+	li	$a0, 0x10010000
 	
 	add 	$v0, $zero, $zero # nollaa rekisteri $v0
 	add 	$t0, $a0, $zero	  # siirrä muistiosoite rekisteristä $a0 rekisteriin $t0
