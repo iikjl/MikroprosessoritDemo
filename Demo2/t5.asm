@@ -21,4 +21,3 @@ loop2:	lw $t1,0($sp)
 	addi $a0,$a0,4
 	subi $t0,$t0,1
 	bne $t0,$zero,loop2
-	
