@@ -4,5 +4,6 @@ L1: 	nop
 # Muita haarautumis pseudokäskyjä ovat bge, bgt ja ble.
 # https://en.wikibooks.org/wiki/MIPS_Assembly/Pseudoinstructions
 
-#kääntyy slt $1, $8, $9
-	#bne $1, $0, label
+# blt kääntyy: 
+	#slt $t1, $s8, $s9
+	#bne $t1, $zero, L1
