@@ -5,7 +5,7 @@
 
 loop:	lw $a0, ($s0)		# luetaan muistista $a0:aan
 	beq $a0, $zero, finish	# lopeta suoritus jos luku on 0
-	slt $t0, $a0, $s1	# jos 0xffffffff pienempi kuin $a0
+	slt $t0, $s1, $a0	# jos 0xffffffff pienempi kuin $a0
 	beq $t0, $zero, skip	# ...ohitetaan aliohjelmakutsu
 	jal proc
 	sw $v0, ($s0)		# talletetaan aliohjelman tulos ($v0)
