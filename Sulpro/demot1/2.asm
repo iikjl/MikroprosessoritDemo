@@ -20,23 +20,23 @@
 	goto main ;hypätään main-funktioon
 
 
-main
+Main:
 
 	movf foo,W ;asetetaan foo:n arvo työrekisteriin
 	CPFSGT bar ;vertaa bar arvoa työrekisterin arvoon skip if bar>W
 	bra $+1  ;jump from HERE to CPFSEQ bar
-	call if_greater,1 ;hyppää alirutiiniin if_greater
+	call If_greater,1 ;hyppää alirutiiniin if_greater
 	CPFSEQ bar ;vertaa bar arvoa työrekisterin arvoon skip if bar = W
 	bra $+1 ;jump from HERE to Call if_lesser,1
-	call if_equal,1 ;hyppää alirutiiniin if_equal
-	call if_lesser,1 ;hyppää alirutiiniin if_lesser
+	call If_equal,1 ;hyppää alirutiiniin if_equal
+	all If_lesser,1 ;hyppää alirutiiniin if_lesser
 
 
-if_greater ;aliohjelmien alustus
+If_greater: ;aliohjelmien alustus
 
-if_lesser
+If_lesser:
 
-if_equal
+If_equal
 
 
 
