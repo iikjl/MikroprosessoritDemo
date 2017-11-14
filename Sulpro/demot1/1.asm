@@ -23,12 +23,12 @@
 		bar equ 0x0D
 		baz equ 0x0E
 ;--------------------------------------------------
-		movf foo,W,
-		addwf foo,W
-		movwf bar
-		movf bar,W
-		addlw 0x10
-		movwf baz
+		movf foo,W, ;siirretään foo:n arvo työrekisteriin
+		addwf foo,W ;lisätään foo:n arvo työrekisterin arvoon
+		movwf bar ;annetaan työrekisterin arvo muuttujalle bar
+		movf bar,W  ;siirretään bar:n arvo työtekisteriin
+		addlw 0x10  ;lisätään työrekisteriin vakio 0x16
+		movwf baz ;annetaan työrekisterin arvo muuttujalle baz
 
 
 
