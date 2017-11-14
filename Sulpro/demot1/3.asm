@@ -17,23 +17,23 @@
 
 ;--------------------------------------------------
 
-	goto Alustaa
-	goto Main
+	goto Alustaa ; jump to Alustaa
+	goto Main ;jump to Main
 
 Main:
 
 
-	call Loop
+	call Loop ;kutsu aliohjelmaa Loop
 
 Loop:
-	movf dat,W
-	addwf sum,W
-	movwf sum
-	decf counter
-	TSTFSZ counter
-	goto Loop
-	return
-	
+	movf dat,W  ;lataa dat arvo työrekisteriin
+	addwf sum,W ;lisää sum arvo työrekisteriin
+	movwf sum ;lataa työrekisterin arvo muuttujaan sum
+	decf counter ;vähennä counterista yksi
+	TSTFSZ counter ;skip if counter = 0
+	goto Loop ;jump to Loop
+	return ;palaa kohtaan, jossa aliohjelmaa on kutsuttu
+
 ;---------------------------------------
 Alustaa:
 	movlw 0x01
