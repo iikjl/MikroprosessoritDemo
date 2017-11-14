@@ -27,11 +27,9 @@
 		addwf foo,W
 		movwf bar
 		movf bar,W
-		addwf W,0x10
+		addlw 0x10
 		movwf baz
 
 
 
 END
-		
-		 
