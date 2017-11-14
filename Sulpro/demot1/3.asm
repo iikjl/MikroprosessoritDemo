@@ -36,7 +36,7 @@ Loop:
 
 ;---------------------------------------
 Alustaa:
-	movlw 0x01
+	movlw 0x01  ;Alustetaan muuttujat
 	movwf dat
 	movlw 0x10
 	movwf counter
