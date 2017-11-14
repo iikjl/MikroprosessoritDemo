@@ -17,22 +17,22 @@
 
 ;--------------------------------------------------
 
-	goto main
+	goto main ;hypätään main-funktioon
 
 
 main
 
-	movf foo,W
-	CPFSGT bar
-	bra $+1
-	call if_greater,1
-	CPFSEQ bar
-	bra $+1
-	call if_equal,1
-	call if_lesser,1
-	
+	movf foo,W ;asetetaan foo:n arvo työrekisteriin
+	CPFSGT bar ;vertaa bar arvoa työrekisterin arvoon skip if bar>W
+	bra $+1  ;jump from HERE to CPFSEQ bar
+	call if_greater,1 ;hyppää alirutiiniin if_greater
+	CPFSEQ bar ;vertaa bar arvoa työrekisterin arvoon skip if bar = W
+	bra $+1 ;jump from HERE to Call if_lesser,1
+	call if_equal,1 ;hyppää alirutiiniin if_equal
+	call if_lesser,1 ;hyppää alirutiiniin if_lesser
 
-if_greater
+
+if_greater ;aliohjelmien alustus
 
 if_lesser
 
