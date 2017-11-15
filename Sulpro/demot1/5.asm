@@ -10,13 +10,13 @@
 		list  P=PIC18F452, F=INHX32, C=160, N=0, ST=OFF, MM=OFF, R=DEC, X=ON
 
         #include P18F452.inc		;include the file
-		
+
 ;--------------------------Macro--------------------------------
 
 LOADF macro literal, register
-	movlw literal
-	movwf register
-	movlw 0x00
+	movlw literal ;lataa arvon literal-parametristä työrekisteriin
+	movwf register ;siirtää työrekisterin arvon parametrina annettuun rekisteriin
+	movlw 0x00 ;asettaa työrekisteriin arvon 0x00
 	endm
 
 
@@ -24,10 +24,9 @@ LOADF macro literal, register
 	goto Main
 
 Main:
-	LOADF 0x01, 0x0D
+	LOADF 0x01, 0x0D ;kutsutaan makroa, joka oksentaa 0x01 -> työrekisteriin ja työrekisterin arvon rekisteriin 0x0D
 	LOADF 0x02, 0x0E
 	LOADF 0xFF, 0x0F
 
 ;------------------------END-------------------------------------
-END	
-	
+END
