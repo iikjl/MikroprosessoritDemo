@@ -25,7 +25,8 @@ Main:
 		rlcf bar, bar ;rotate left through Carry
 		movff bar, baz ;siirretään bar sisältö muuttujaan baz
 		movlw 0x10 ;asetetaan 0x10 työrekisteriin
-		addwf baz ;lisätään työrekisterin arvo muuttujaan baz
+		addwf baz ;lisätään työrekisterin arvo ja baz arvo keskenään 
+		movwf baz ; lisätään työrekisterin arvo muuttujaan baz
 
 ;----------------------------------Alustus------------------------------------
 Alustus:
