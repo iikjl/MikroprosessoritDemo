@@ -36,7 +36,7 @@ If_greater: ;aliohjelmien alustus
 
 If_lesser:
 
-If_equal
+If_equal:
 
 
 
