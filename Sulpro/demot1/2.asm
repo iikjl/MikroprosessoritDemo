@@ -24,10 +24,10 @@ Main:
 
 	movf foo,W ;asetetaan foo:n arvo työrekisteriin
 	CPFSGT bar ;vertaa bar arvoa työrekisterin arvoon skip if bar>W
-	bra $+1  ;jump from HERE to CPFSEQ bar
+	bra $+2  ;jump from HERE to CPFSEQ bar
 	call If_greater,1 ;hyppää alirutiiniin if_greater
 	CPFSEQ bar ;vertaa bar arvoa työrekisterin arvoon skip if bar = W
-	bra $+1 ;jump from HERE to Call if_lesser,1
+	bra $+2 ;jump from HERE to Call if_lesser,1
 	call If_equal,1 ;hyppää alirutiiniin if_equal
 	all If_lesser,1 ;hyppää alirutiiniin if_lesser
 
