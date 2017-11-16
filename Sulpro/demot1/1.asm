@@ -22,7 +22,7 @@ Main:
 		call Alustus ;alustetaan muuttujille arvoja
 		movwf foo ;asetetaan foo:n arvo työrekisteriin W
 		movff foo, bar ;siirretään foo sisältö muuttujaan bar
-		rlcf bar, bar ;rotate left through Carry
+		rlf bar, bar ;rotate left
 		movff bar, baz ;siirretään bar sisältö muuttujaan baz
 		movlw 0x10 ;asetetaan 0x10 työrekisteriin
 		addwf baz ;lisätään työrekisterin arvo ja baz arvo keskenään 
