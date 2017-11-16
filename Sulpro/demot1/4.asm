@@ -27,7 +27,7 @@ Main:
 Alustus:
 		movlw 0x00 ;aseta työrekisteriin arvo 0x00
 		movwf counter ;siirrä työrekisterin arvo muuttujaan counter
-		movlw 0x0A ;aseta työrekisteriin arvo 0x00
+		movlw 0x0A ;aseta työrekisteriin arvo 0x0A
 		return
 
 ;----------------------------Loop--------------------------------------
